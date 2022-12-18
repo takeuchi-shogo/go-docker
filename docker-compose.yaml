@@ -1,0 +1,13 @@
+
+version: '3'
+
+services:
+  app:
+    container_name: go-docker
+    build:
+      context: .
+    volumes:
+      - ./app:/go/src/github.com/go-docker
+    tty: true
+    environment:
+      - TZ=Asia/Tokyo
